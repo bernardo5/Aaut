@@ -1,6 +1,6 @@
 eta= 0.03: 0.01: 1;
 a=20;
-aux_steps=100;
+aux_steps=187;
 i=1;
 
 while eta(i)~=1
