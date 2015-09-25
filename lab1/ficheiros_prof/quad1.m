@@ -1,9 +1,10 @@
-
+%o apostrofo faz com que a matriz fique transposta
 x1a = (-10:10)';
 
 
 y(x1a+11) = a * x1a.^2 / 2;
 
+%clf--clear current figure
 figure(1), clf
 plot(x1a,y,'b-')
 hold on
