@@ -55,7 +55,6 @@
 			%
 			% This is Code Section 1
             
-            
 			% ***************************************************************************************************************
 			
 			for trigramindex = 1:numel(text)-2;					% Loop through all the trigrams of the input text
@@ -73,6 +72,8 @@
 				% Add here any code that is to be executed once for each trigram.
 				%
 				% This is Code Section 2
+                probability_of_trigram(trigramindex)=log((trigramcount+1)/(total_counts(languageindex)+(60.^3)));
+                
 				% *****************************************************************
 				
 			end		% The loop on trigrams ends here
@@ -80,8 +81,8 @@
 			% *******************************************************************************************************************
 			% Add here any code that is to be executed after all trigrams are processed, for the current language.
 			% It should end with an instruction that stores the language's score in the array 'scores', in the following form:
-			%
-			% scores(languageindex) = <expression>
+			
+			scores(languageindex) = sum(probability_of_trigram);
 			%
 			% This is Code Section 3
 			% *******************************************************************************************************************

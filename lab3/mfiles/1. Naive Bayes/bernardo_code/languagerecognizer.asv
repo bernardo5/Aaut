@@ -73,6 +73,8 @@
 				% Add here any code that is to be executed once for each trigram.
 				%
 				% This is Code Section 2
+                probability_of_trigram(trigramindex)=log((trigramcount+1)/(total_counts(languageindex)+(60.^3)));
+                
 				% *****************************************************************
 				
 			end		% The loop on trigrams ends here
