@@ -54,7 +54,9 @@
 			% Add here any initialization code that is to be performed once for each language, before the loop on trigrams.
 			%
 			% This is Code Section 1
-            
+            if languageindex~=1
+                zeros(probability_of_trigram);
+            end
 			% ***************************************************************************************************************
 			
 			for trigramindex = 1:numel(text)-2;					% Loop through all the trigrams of the input text
