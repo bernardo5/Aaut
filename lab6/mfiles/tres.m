@@ -14,16 +14,16 @@ orderedeig=sort(diag(eigvalues), 'descend');
 
 order=components_three( eigvalues,orderedeig )';
 
-for i=0:100
-    yr=0;
-    yr=reconstruct_three( mean, y, vectors , i );
-    figure
-    showimg(yr(:,1:3));
-end
+% for i=0:100
+%     yr=0;
+%     yr=reconstruct_three( mean, y, vectors , i );
+%     figure
+%     showimg(yr(:,1:3));
+% end
 
 %knee part
 
-% for m=0:3000
-%     hold on
-%     plot(m, sum(orderedeig(m+1:3000)), 'r.')
-% end
+for m=0:3000
+    hold on
+    plot(m, sum(orderedeig(m+1:3000)), 'r.')
+end
